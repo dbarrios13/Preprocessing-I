@@ -6,7 +6,7 @@
 
 @main-font: 'Open Sans', sans-serif;
 @heading-font: 'Noto Sans', sans-serif;
-@main-color: #8F928F;
+@main-color: lightgrey;
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -114,6 +114,58 @@ header {
 		}
 		p {
 			font-size: 3rem;
+		}
+	}
+}
+
+.main-content {
+	margin: 20px 0;
+	display: flex;
+	div {
+		width: 50%;
+		padding: 1rem;
+		font-size: 1.5rem;
+		h2 {
+			font-size: 2rem;
+			margin-bottom: 10px;
+		}
+		ul {
+			border: 1px solid @main-color;
+			border-radius: 1%;
+		}
+		li{
+			border-bottom: 1px solid @main-color;
+			padding: 20px;
+		}
+		p {
+			line-height: 1.5;
+		}
+	}
+}
+
+.work-history {
+	h2 {
+		font-size: 2rem;
+		margin-bottom: 10px;
+	}
+	table{
+		border-top: 1px solid @main-color;
+		border-bottom: 1px solid @main-color;
+		font-size: 1.5rem;
+		width: 100%;
+		height: 30vh;
+		text-align: center;
+		tr{
+			&:nth-child(even){
+				background: @main-color;
+			}
+			th {
+				font-weight: bolder;
+				padding-top: 10px;
+			}
+			td {
+				padding-top: 10px;
+			}
 		}
 	}
 }

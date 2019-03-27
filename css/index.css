@@ -132,5 +132,57 @@ table {
 }
 html,
 body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 62.5%;
   height: 100%;
+}
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+}
+header {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.5rem;
+}
+header nav a {
+  margin-right: 3rem;
+  text-decoration: none;
+  color: black;
+}
+header nav a:last-child {
+  margin-right: 0;
+}
+header nav a:hover {
+  color: #8F928F;
+}
+.jumbotron {
+  display: flex;
+  background: #8F928F;
+  border-radius: 1%;
+  padding: 1rem;
+  max-height: 60vh;
+}
+.jumbotron div {
+  display: flex;
+  width: 50%;
+}
+.jumbotron div img {
+  width: 80%;
+  margin: auto;
+}
+.jumbotron .jumbo-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Noto Sans', sans-serif;
+  padding: 4rem 4rem 4rem 0;
+}
+.jumbotron .jumbo-heading h1 {
+  font-size: 5rem;
+}
+.jumbotron .jumbo-heading p {
+  font-size: 3rem;
 }

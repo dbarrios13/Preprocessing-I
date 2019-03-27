@@ -4,6 +4,10 @@
    License: none (public domain)
 */
 
+@main-font: 'Open Sans', sans-serif;
+@heading-font: 'Noto Sans', sans-serif;
+@main-color: #8F928F;
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -54,6 +58,62 @@ table {
 }
 
 html, body {
-    height: 100%;
+	font-family: @main-font;
+	font-size: 62.5%;
+	height: 100%;
 }
 
+.container {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1000px;
+}
+
+header {
+	margin: 2rem 0;
+	display: flex;
+	justify-content: flex-end;
+	font-size: 1.5rem;
+	nav {
+		a {
+			margin-right: 3rem;
+			text-decoration: none;
+			color: black;
+			&:last-child {
+				margin-right: 0;
+			}
+			&:hover {
+				color: @main-color;
+			}
+		}
+	}
+}
+
+.jumbotron {
+	display: flex;
+	background: @main-color;
+	border-radius: 1%;
+	padding: 1rem;
+	max-height: 60vh;
+	div {
+		display: flex;
+		width: 50%;
+		img {
+			width: 80%;
+			margin: auto;
+		}
+	}
+	.jumbo-heading{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		font-family: @heading-font;
+		padding: 4rem 4rem 4rem 0;
+		h1 {
+			font-size: 5rem;
+		}
+		p {
+			font-size: 3rem;
+		}
+	}
+}

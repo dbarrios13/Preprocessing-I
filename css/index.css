@@ -138,7 +138,7 @@ body {
 }
 .container {
   margin: 0 auto;
-  width: 100%;
+  width: 90%;
   max-width: 1000px;
 }
 header {
@@ -158,20 +158,44 @@ header nav a:last-child {
 header nav a:hover {
   color: lightgrey;
 }
+@media (max-width: 500px) {
+  header nav a {
+    margin-right: 6rem;
+  }
+}
+@media (max-width: 500px) {
+  header {
+    justify-content: space-evenly;
+  }
+}
 .jumbotron {
-  display: flex;
   background: lightgrey;
   border-radius: 1%;
-  padding: 1rem;
   max-height: 60vh;
+  display: flex;
+  padding: 1rem;
+}
+.jumbotron div {
+  width: 50%;
+}
+@media (max-width: 500px) {
+  .jumbotron {
+    flex-direction: column;
+  }
 }
 .jumbotron div {
   display: flex;
-  width: 50%;
 }
 .jumbotron div img {
   width: 80%;
   margin: auto;
+}
+@media (max-width: 500px) {
+  .jumbotron div {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
 }
 .jumbotron .jumbo-heading {
   display: flex;
@@ -186,29 +210,51 @@ header nav a:hover {
 .jumbotron .jumbo-heading p {
   font-size: 3rem;
 }
+@media (max-width: 500px) {
+  .jumbotron .jumbo-heading {
+    padding: 2rem 0;
+  }
+}
 .main-content {
   margin: 20px 0;
+  font-size: 1.5rem;
   display: flex;
+  padding: 1rem;
 }
 .main-content div {
   width: 50%;
-  padding: 1rem;
-  font-size: 1.5rem;
 }
-.main-content div h2 {
+.main-content h2 {
   font-size: 2rem;
   margin-bottom: 10px;
 }
-.main-content div ul {
+.main-content ul {
   border: 1px solid lightgrey;
   border-radius: 1%;
 }
-.main-content div li {
+.main-content li {
   border-bottom: 1px solid lightgrey;
   padding: 20px;
 }
-.main-content div p {
-  line-height: 1.5;
+.main-content li:hover {
+  background: lightgrey;
+}
+.main-content p {
+  line-height: 2;
+}
+.main-content .fields {
+  width: 90%;
+}
+.main-content .fields .field {
+  width: 100%;
+  padding: 10px 0;
+}
+.main-content .fields input {
+  width: 100%;
+  margin-top: 5px;
+}
+.main-content .fields textarea {
+  margin-top: 5px;
 }
 .work-history h2 {
   font-size: 2rem;
@@ -231,4 +277,12 @@ header nav a:hover {
 }
 .work-history table tr td {
   padding-top: 10px;
+}
+form {
+  width: 50%;
+}
+footer {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 20px 0 10px;
 }

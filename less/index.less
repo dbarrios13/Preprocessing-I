@@ -8,6 +8,25 @@
 @heading-font: 'Noto Sans', sans-serif;
 @main-color: lightgrey;
 
+.content-divider() {
+	display: flex;
+	padding: 1rem;
+	div {
+		width: 50%;
+	}
+}
+
+.main-font-size() {
+	font-size: 1.5rem;
+}
+
+.heading2() {
+	h2 {
+		font-size: 2rem;
+		margin-bottom: 10px;
+	}
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -65,7 +84,7 @@ html, body {
 
 .container {
 	margin: 0 auto;
-	width: 100%;
+	width: 90%;
 	max-width: 1000px;
 }
 
@@ -73,7 +92,7 @@ header {
 	margin: 2rem 0;
 	display: flex;
 	justify-content: flex-end;
-	font-size: 1.5rem;
+	.main-font-size;
 	nav {
 		a {
 			margin-right: 3rem;
@@ -85,22 +104,34 @@ header {
 			&:hover {
 				color: @main-color;
 			}
+			@media (max-width: 500px){
+				margin-right: 6rem;
+			}
 		}
+	}
+	@media (max-width: 500px) {
+		justify-content: space-evenly;
 	}
 }
 
 .jumbotron {
-	display: flex;
 	background: @main-color;
 	border-radius: 1%;
-	padding: 1rem;
 	max-height: 60vh;
+	.content-divider;
+	@media (max-width: 500px) {
+		flex-direction: column;
+	}
 	div {
 		display: flex;
-		width: 50%;
 		img {
 			width: 80%;
 			margin: auto;
+		}
+		@media (max-width: 500px) {
+			display: block;
+			width: 100%;
+			text-align: center;
 		}
 	}
 	.jumbo-heading{
@@ -115,39 +146,50 @@ header {
 		p {
 			font-size: 3rem;
 		}
+		@media (max-width: 500px) {
+			padding: 2rem 0;
+		}
 	}
 }
 
 .main-content {
 	margin: 20px 0;
-	display: flex;
-	div {
-		width: 50%;
-		padding: 1rem;
-		font-size: 1.5rem;
-		h2 {
-			font-size: 2rem;
-			margin-bottom: 10px;
-		}
-		ul {
-			border: 1px solid @main-color;
-			border-radius: 1%;
-		}
-		li{
-			border-bottom: 1px solid @main-color;
-			padding: 20px;
-		}
-		p {
-			line-height: 1.5;
+	.main-font-size;
+	.content-divider;
+	.heading2;
+	ul {
+		border: 1px solid @main-color;
+		border-radius: 1%;
+	}
+	li{
+		border-bottom: 1px solid @main-color;
+		padding: 20px;
+		&:hover {
+			background: @main-color;
 		}
 	}
+	p {
+		line-height: 2;
+	}
+	.fields {
+		width: 90%;
+		.field{
+			width: 100%;
+			padding: 10px 0;
+		}
+		input {
+			width: 100%;
+			margin-top: 5px;
+		}
+		textarea {
+			margin-top: 5px;
+		}
+	}
+	
 }
 
 .work-history {
-	h2 {
-		font-size: 2rem;
-		margin-bottom: 10px;
-	}
+	.heading2;
 	table{
 		border-top: 1px solid @main-color;
 		border-bottom: 1px solid @main-color;
@@ -168,4 +210,14 @@ header {
 			}
 		}
 	}
+}
+
+form {
+	width: 50%;
+}
+
+footer {
+	.main-font-size;
+	text-align: center;
+	margin: 20px 0 10px;
 }
